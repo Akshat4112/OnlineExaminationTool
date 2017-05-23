@@ -1,4 +1,5 @@
-<?php ?>
+<?php
+?>
 
 <html><head>
     <link type="text/css" href="styles/bootstrap.css" rel="stylesheet">
@@ -9,7 +10,7 @@
 <div class="container">
     <div class="row topmargin">
         <div class="col-lg-12">
-            <div class="panel panel-primary">
+            <div class="panel panel-warning">
                 <div class="panel-heading">
                     <h3 class="panel-title">Online Examination Tool</h3>
                 </div>
@@ -46,7 +47,7 @@
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button type="reset" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </div>
                 </fieldset>
@@ -102,13 +103,20 @@
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button type="reset" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
     </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body" style="margin-left: 1040px;">
+        Developed By <a href="www.futureheadtech.com"> Futurehead Technologies</a>
+    </div>
+    <div class="panel-footer">All Rights Reserved</div>
 </div>
 
 
