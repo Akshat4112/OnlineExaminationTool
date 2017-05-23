@@ -1,8 +1,8 @@
 <?php ?>
 
 <html><head>
-    <link type="text/css" href="bootstrap.css" rel="stylesheet">
-    <link type="text/css" href="style.css" rel="stylesheet">
+    <link type="text/css" href="styles/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="styles/style.css" rel="stylesheet">
     <title>OET</title>
 </head>
 <body>
