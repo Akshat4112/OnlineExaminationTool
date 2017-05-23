@@ -15,28 +15,33 @@
                     <h3 class="panel-title">Online Examination Tool</h3>
                 </div>
                 <div class="panel-body">
-                    Online Examination Tool for Railway.
+                    Online Examination Tool for Online Exam Prepration
                 </div>
             </div>
 
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 form_margin">
+            <?php
+            if(isset($_GET['run'])&&$_GET['run']=="failed"){
+                echo 'Email or pass is incorrect';
+            }
+            ?>
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post"  action="signin_sub.php">
                 <fieldset>
                     <legend>Signin</legend>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="e">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                         <div class="col-lg-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="p">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox"> Remember me
@@ -56,50 +61,43 @@
         </div>
         <div class="col-lg-6">
 
-            <form class="form-horizontal">
+            <?php
+            if(isset($_GET['run'])&& $_GET['run']=="success"){
+                echo "<div class=\"alert alert-dismissible alert-success\">
+  <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>
+  <strong>Well done!</strong> You are registered successfully <a href=\"#\" class=\"alert-link\"></a>.
+</div>";
+            }
+            ?>
+
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="signup_sub.php">
                 <fieldset>
                     <legend>Signup</legend>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Name</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" name="n">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="e">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                         <div class="col-lg-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="p">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword" class="col-lg-2 control-label">Confirm Password</label>
+                        <label for="inputPassword" class="col-lg-2 control-label">Upload Image</label>
                         <div class="col-lg-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            <input type="file" class="form-control" name="img">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-lg-2 control-label">Gender</label>
-                        <div class="col-lg-10">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                    Male
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                    Female
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button type="reset" class="btn btn-default">Cancel</button>
