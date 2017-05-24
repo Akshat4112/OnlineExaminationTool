@@ -12,6 +12,7 @@ class users{
     public $password ="";
     public $dbname ="oet";
     public $conn;
+    public $data;
 
     public function __construct()
     {
@@ -42,6 +43,15 @@ class users{
     }
     public function url($url){
         header("location:".$url);
+    }
+    public function users_profile($email){
+        global $data;
+        $query=$this->conn->query("select  *from signup where email='$email'");
+        $row=mysqli_fetch_array($query);
+        if($query->num_rows > 0){
+            $this->data[]=$row;
+        }
+        return $data;
     }
 }
 
