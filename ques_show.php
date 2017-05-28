@@ -20,10 +20,10 @@ $qus->ques_show($cat);
     <?php
     $i=1;
     foreach ($qus->qus as $qust){?>
-    <table class="table table-striped table-hover ">
+    <table class="table table-hover ">
         <thead>
-        <tr>
-            <th><?php echo $i.'';?><?php echo $qust['ques'];?></th>
+        <tr class="alert-danger">
+            <th><?php echo $i.' ';?><?php echo $qust['ques'];?></th>
         </tr>
         </thead>
         <tbody>
