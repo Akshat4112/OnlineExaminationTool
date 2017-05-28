@@ -3,6 +3,7 @@ include 'class/users.php';
 $qus=new users;
 $cat= $_POST['cat'];
 $qus->ques_show($cat);
+$_SESSION['cat']=$cat;
 
 //print_r($qus->qus);
 ?><html>
