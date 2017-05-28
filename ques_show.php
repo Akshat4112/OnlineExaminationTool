@@ -17,6 +17,7 @@ $qus->ques_show($cat);
 <div class="container">
     <div class="col-sm-2"></div>
     <div class="col-sm-8"> <h2>Online Quiz</h2>
+        <form action="answer.php" method="post">
     <?php
     $i=1;
     foreach ($qus->qus as $qust){?>
@@ -27,21 +28,34 @@ $qus->ques_show($cat);
         </tr>
         </thead>
         <tbody>
+        <?php if(isset($qust['ans1'])){?>
         <tr>
-            <td>&nbsp;1&emsp;<input type="radio" value="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans1'];?></td>
+            <td>&nbsp;1&emsp;<input type="radio" value="0" name="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans1'];?></td>
         </tr>
+        <?php }?>
+        <?php if(isset($qust['ans2'])){?>
         <tr>
-            <td>&nbsp;2&emsp;<input type="radio" value="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans2'];?></td>
+            <td>&nbsp;2&emsp;<input type="radio" value="1" name="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans2'];?></td>
         </tr>
+        <?php }?>
+        <?php if(isset($qust['ans3'])){?>
         <tr>
-            <td>&nbsp;3&emsp;<input type="radio" value="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans3'];?></td>
+            <td>&nbsp;3&emsp;<input type="radio" value="2" name="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans3'];?></td>
         </tr>
+        <?php }?>
+        <?php if(isset($qust['ans4'])){?>
         <tr>
-            <td>&nbsp;4&emsp;<input type="radio" value="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans4'];?></td>
+            <td>&nbsp;4&emsp;<input type="radio" value="3" name="<?php echo $qust['id']; ?>" />&nbsp;<?php echo $qust['ans4'];?></td>
+        </tr>
+        <?php }?>
+        <tr>
+            <td><input type="radio" style="display:none;" checked="checked" value="4" name="<?php echo $qust['id']; ?>" /></td>
         </tr>
         </tbody>
     </table>
 <?php $i++;}?>
+        <center><input type="submit" value="submit Quiz" class="btn btn-success"></center>
+        </form>
     </div>
     <div class="col-sm-2"></div>
 </div>

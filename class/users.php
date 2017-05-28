@@ -74,6 +74,9 @@ class users{
         return $qus;
 
     }
+    public function answer(){
+        
+    }
 }
 
 new users;
