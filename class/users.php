@@ -74,8 +74,8 @@ class users{
         return $qus;
 
     }
-    public function answer(){
-        
+    public function answer($data){
+        print_r($data);
     }
 }
 

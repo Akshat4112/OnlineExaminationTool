@@ -1,11 +1,5 @@
 <?php
 include 'class/users.php';
 $ans=new users;
+$ans->answer($_POST);
 
-/**
- * Created by PhpStorm.
- * User: Innvosign
- * Date: 5/28/2017
- * Time: 9:06 PM
- */
-print_r($_POST);
