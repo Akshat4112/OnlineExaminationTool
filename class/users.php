@@ -13,6 +13,8 @@ class users{
     public $dbname ="oet";
     public $conn;
     public $data;
+    public $cat;
+    public $qus;
 
     public function __construct()
     {
@@ -52,6 +54,25 @@ class users{
             $this->data[]=$row;
         }
         return $data;
+    }
+    public function cat_show(){
+        global $cat;
+        $query=$this->conn->query("select  *from category");
+        while($row=mysqli_fetch_array($query))
+        {
+            $this->cat[]=$row;
+        }
+        return $cat;
+    }
+    public function ques_show($qus){
+
+        $query=$this->conn->query("select  *from questions where cat_id='$qus'");
+        while($row=mysqli_fetch_array($query))
+        {
+            $this->qus[]=$row;
+        }
+        return $qus;
+
     }
 }
 
