@@ -13,12 +13,49 @@ $_SESSION['cat']=$cat;
     <link type="text/css" href="styles/bootstrap.css" rel="stylesheet">
     <script src="styles/jq.js"></script>
     <title>Questions</title>
+    <script type="text/javascript">
+        function  timeout() {
+            var hours=Math.floor(timeLeft/3600);
+            var minute=Math.floor((timeLeft-(hours*60*60)-30)/60);
+
+            /*
+            * 2*60*60-2*60*60-30=-30/60=-1/2
+            *
+            * */
+            var second=timeLeft%60;
+            var hrs=checktime(hours);
+            var mint=checktime(minute);
+            var sec=checktime(second);
+            if (timeLeft <= 0) {
+                clearTimeout(tm);
+                document.getElementById("form1").submit();
+            } else{
+
+                document.getElementById("time").innerHTML = hrs+":"+mint + ":" + sec;
+            }
+            timeLeft--;
+
+            var tm=setTimeout(function () {
+                timeout()()
+            },1000);
+        }
+        function  checktime(msg) {
+            if(msg<10){
+                msg="0"+msg;
+            }
+            return msg;
+        }
+    </script>
 </head>
-<body>
+<body onload="timeout()">
 <div class="container">
     <div class="col-sm-2"></div>
-    <div class="col-sm-8"> <h2>Online Quiz</h2>
-        <form action="answer.php" method="post">
+    <div class="col-sm-8"> <h2>Online Quiz
+            <script type="text/javascript">
+                var timeLeft=2*60*60;
+            </script>
+            <div id="time" style="float: right;"></div> </h2>
+        <form id="form1" action="answer.php" method="post">
     <?php
     $i=1;
     foreach ($qus->qus as $qust){?>

@@ -1,7 +1,5 @@
-<?php
-?>
-
-<html><head>
+<html>
+<head>
     <link type="text/css" href="styles/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="styles/style.css" rel="stylesheet">
     <title>OET</title>
@@ -110,12 +108,11 @@
     </div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-default" style="margin-top: 62px;">
     <div class="panel-body" style="margin-left: 1040px;">
         Developed By <a href="www.futureheadtech.com"> Futurehead Technologies</a>
     </div>
-    <div class="panel-footer">All Rights Reserved</div>
+    <div class="panel-footer">All Rights Reserved &copy; 2017</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
