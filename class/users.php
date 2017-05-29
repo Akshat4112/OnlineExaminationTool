@@ -98,6 +98,9 @@ class users{
         $array['no_answer']=$no_answer;
         return $array;
     }
+    public function add_quiz(){
+        echo "run";
+    }
 }
 
 new users;

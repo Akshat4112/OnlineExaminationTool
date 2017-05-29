@@ -108,9 +108,9 @@
     </div>
 </div>
 
-<div class="panel panel-default" style="margin-top: 62px;">
-    <div class="panel-body" style="margin-left: 1040px;">
-        Developed By <a href="www.futureheadtech.com"> Futurehead Technologies</a>
+<div class="panel panel-default" style="margin-top: 62">
+    <div class="panel-body" style="margin-left: 1040">
+        Developed By <a href="http://www.futureheadtech.com"> Futurehead Technologies</a>
     </div>
     <div class="panel-footer">All Rights Reserved &copy; 2017</div>
 </div>

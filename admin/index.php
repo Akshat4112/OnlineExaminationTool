@@ -22,9 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -76,43 +74,43 @@
             <div class="table-responsive">
                 <table class="table table-striped">
 
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method="post" action="add_quiz.php">
                         <fieldset>
                             <legend>Admin Pannel</legend>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Question</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                    <input type="text" name="ques" class="form-control" id="inputEmail" placeholder="Enter Question">
                                 </div>
                             </div><br><br>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Option 1</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control"  placeholder="Enter Option 1">
+                                    <input type="text" name="op1" class="form-control"  placeholder="Enter Option 1">
                                 </div>
                             </div><br><br>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Option 2</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control"  placeholder="Enter Option 2">
+                                    <input type="text" name="op2" class="form-control"  placeholder="Enter Option 2">
                                 </div>
                             </div><br><br>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Option 3</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control"  placeholder="Enter Option 3">
+                                    <input type="text" name="op3" class="form-control"  placeholder="Enter Option 3">
                                 </div>
                             </div><br><br>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Option 4</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control"  placeholder="Enter Option 4">
+                                    <input type="text" name="op4" class="form-control"  placeholder="Enter Option 4">
                                 </div>
                             </div><br><br>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Answer</label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control"  placeholder="Enter Answer">
+                                    <input type="text" name="ans" class="form-control"  placeholder="Enter Answer">
                                 </div>
                             </div><br><br>
 
@@ -120,7 +118,8 @@
                                 <label for="select" class="col-lg-2 control-label">Category</label>
                                 <div class="col-lg-10">
                                     <select class="form-control" id="select" name="cat">
-                                        <option value="">Railway_1</option>
+                                        <option value="" disabled="disabled">Choose Category</option>
+                                        <option value="1">Railway_1</option>
                                         <option value="">Railway_2</option>
                                     </select>
                                     <br>
