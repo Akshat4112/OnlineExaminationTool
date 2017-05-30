@@ -15,6 +15,7 @@ class users{
     public $data;
     public $cat;
     public $qus;
+    public $cate=0;
 
     public function __construct()
     {
@@ -24,6 +25,7 @@ class users{
         }
     }
     public function signup($data){
+
         $this->conn->query($data);
         return true;
     }
@@ -97,6 +99,16 @@ class users{
         $array['wrong']=$wrong;
         $array['no_answer']=$no_answer;
         return $array;
+    }
+    public function cat_shows(){
+
+        $query=$this->conn->query("select * from category");
+        while ($row=mysqli_fetch_all($query)){
+            $this->cate[]=$row;
+
+        }
+        return $row;
+
     }
     public function add_quiz(){
         echo "run";

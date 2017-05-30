@@ -1,3 +1,11 @@
+<?php
+include '../class/users.php';
+$cate=new users;
+$categ =0;
+$categ=$cate->cat_shows();
+echo '<br>';
+print_r($categ);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,8 +127,15 @@
                                 <div class="col-lg-10">
                                     <select class="form-control" id="select" name="cat">
                                         <option value="" disabled="disabled">Choose Category</option>
-                                        <option value="1">Railway_1</option>
-                                        <option value="">Railway_2</option>
+
+                                        <?php
+                                        foreach($categ as $c){
+                                            echo "<option value=".$c['id'].">".$c['cat_name']."</option>";
+                                        }
+
+                                        ?>
+                                        <!-- option value="">Railway_1</option>
+                                        <option value="">Railway_2</option -->
                                     </select>
                                     <br>
                                  </div>
