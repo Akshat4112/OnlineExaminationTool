@@ -17,5 +17,5 @@ issues, as well as missing features.
 *******************
 Screenshots
 *******************
-![Screenshot 1](https://www.github.com/akshat4112/OET/OET Screenshots/1.png)
+![Screenshot 1](https://www.github.com/akshat4112/OET/OET_Screenshots/1.png)
 
